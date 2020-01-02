@@ -2,12 +2,11 @@ module Chapter3 where
 
 dropLastItem :: [a] -> [a]
 dropLastItem y = take ((length y) - 1) y
-
 dropLastLetter :: String -> String
 dropLastLetter y = take (allButOne) y
     where allButOne = (length y) - 1
 
-thirdLetter :: String -> Char
+thirdLetter :: [Char] -> Char
 thirdLetter x = (!!) x 2
 
 letterIndex :: Int -> Char
@@ -20,3 +19,4 @@ rvrs = (drop 9 phrase) ++ " " ++ (take 2 $ drop 6 phrase) ++ " " ++ (take 5 phra
 
 
 
+type String' = [Char] -- This is a type alias 

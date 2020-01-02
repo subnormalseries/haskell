@@ -21,12 +21,20 @@ instance Numberish Year where
 
 
 
-sumNumberish :: Numberish a => a -> a -> a
-sumNumberish a a' = fromNumber summed
- where
-  integerA  = toNumber a
-  integerA' = toNumber a'
-  summed    = integerA + integerA'
+sumNumberish :: (Numberish a) => a -> a -> a
+sumNumberish a a' = fromNumber (toNumber a + toNumber a')
+
+
+--sumNumberish a a' = fromNumber summed
+--  where summed = 
+
+
+--sumNumberish :: Numberish a => a -> a -> a
+--sumNumberish a a' = fromNumber summed
+-- where
+--  integerA  = toNumber a
+--  integerA' = toNumber a'
+--  summed    = integerA + integerA'
 
 
 
@@ -103,6 +111,10 @@ freud' :: Int -> Int
 freud' x = x
 
 
+myX = 1 :: Int
+
+sigmund :: Int -> Int
+sigmund x = myX
 
 jung :: [Int] -> Int
 jung xs = head $ sort xs

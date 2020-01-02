@@ -19,7 +19,7 @@ addOneIfOdd' = \x -> case odd x of
 --     | odd x = x + 1
 --     | otherwise = x
 
-addOneIfOdd'' x | x > 3     = x + 1
+addOneIfOdd'' x | odd x     = x + 1
                 | otherwise = x
 
 addOneIfOdd''' x = if odd x then (+ 1) x else x
@@ -41,17 +41,30 @@ mflip' f x y = f y x
 
 
 
-newtype Username = Username String
+newtype Username = Username String deriving Show
 
-newtype AccountNumber = AccountNumber Integer
+newtype AccountNumber = AccountNumber Integer deriving Show
 
-data User = UnRegisteredUser | RegisteredUser Username AccountNumber
+data User = UnRegisteredUser | RegisteredUser Username AccountNumber deriving Show
+
+userTest = RegisteredUser (Username "James") (AccountNumber 123)
+
+printUser' :: User -> IO ()
+pritnUser' UnRegisteredUser = print "Unregistered User"
+printUser' (RegisteredUser (Username name) (AccountNumber number)) = 
+  print $ "name: " ++ name ++ " number: " ++ show number
 
 
--- printUser :: User -> IO ()
--- printUser UnRegisteredUser = putStrLn "UnregisteredUser"
--- printUser (RegisteredUser (Username name) (AccountNumber number)) =
---   putStrLn ("RegisteredUser Name: " ++ show name ++ " Number: " ++ show number)
+
+
+
+
+
+
+
+
+
+
 
 printUser :: User -> IO ()
 printUser UnRegisteredUser = putStrLn "UnregisteredUser"
@@ -107,3 +120,5 @@ antarcticPenguin _                    = False
 antarcticOrGalapagosPenguin :: Penguin -> Bool
 antarcticOrGalapagosPenguin peng =
   antarcticPenguin peng || galapagosPenguin peng
+f :: (a,b,c) -> (d,e,f) -> ((a,d),(c,f))
+f (a,_,c) (d,_,f) = ((a,d), (c,f))
