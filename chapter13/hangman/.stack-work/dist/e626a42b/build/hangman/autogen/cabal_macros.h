@@ -11,6 +11,17 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_hangman */
 
+/* package QuickCheck-2.13.2 */
+#ifndef VERSION_QuickCheck
+#define VERSION_QuickCheck "2.13.2"
+#endif /* VERSION_QuickCheck */
+#ifndef MIN_VERSION_QuickCheck
+#define MIN_VERSION_QuickCheck(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  13 || \
+  (major1) == 2 && (major2) == 13 && (minor) <= 2)
+#endif /* MIN_VERSION_QuickCheck */
+
 /* package base-4.12.0.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.12.0.0"
@@ -144,7 +155,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hangman-0.1.0.0-BPKFiitKHgY9UNJJ1Vngoh-hangman"
+#define CURRENT_COMPONENT_ID "hangman-0.1.0.0-H5bCP3E4LdT5BAXrQQdacQ-hangman"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

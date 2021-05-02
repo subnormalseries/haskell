@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\bin"
-libdir     = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\lib\\x86_64-windows-ghc-8.6.5\\hangman-0.1.0.0-BPKFiitKHgY9UNJJ1Vngoh-hangman"
+libdir     = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\lib\\x86_64-windows-ghc-8.6.5\\hangman-0.1.0.0-H5bCP3E4LdT5BAXrQQdacQ-hangman"
 dynlibdir  = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\lib\\x86_64-windows-ghc-8.6.5"
 datadir    = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\share\\x86_64-windows-ghc-8.6.5\\hangman-0.1.0.0"
 libexecdir = "C:\\Users\\subnormalseries\\git\\haskell\\chapter13\\hangman\\.stack-work\\install\\f09a5271\\libexec\\x86_64-windows-ghc-8.6.5\\hangman-0.1.0.0"
